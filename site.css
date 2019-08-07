@@ -1,0 +1,250 @@
+/* BASE STYLE */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+	overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 14px;
+	line-height: 1.5;
+  font-family: 'Times', serif;
+	color: red;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+p {
+	margin: 0;
+}
+
+h1 {
+	font-size: 26px;
+  line-height: 1.2;
+  margin-bottom: 80px;
+	font-weight: 500;
+}
+
+a {
+  color: red;
+	text-decoration: none;
+}
+
+a:hover {
+  text-decoration: line-through;
+}
+
+.sm-page {
+	max-width: 1000px;
+}
+
+/* CREDIT STYLING */
+.sm-credit-container {
+  position: absolute;
+  width: 70%;
+  top: 20px;
+  left: 0;
+}
+
+.sm-credit-container p {
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+.sm-credit-row {
+	padding-bottom: 13px;
+}
+
+.sm-credit-row span {
+  text-transform: uppercase;
+}
+
+.sm-credit-hover {
+  letter-spacing: 0.2em;
+  transition: 0.6s ease;
+}
+
+.sm-credit-hover:hover {
+	letter-spacing: 1em;
+	text-decoration: none;
+}
+
+/* TITLE */
+.sm-title-container {
+  margin-left: 40px;
+  margin-top: 40px;
+	width: 70%;
+	position: relative;
+	overflow: hidden;
+}
+
+.sm-title-container h1 {
+  transition: 2s ease infinite;
+}
+
+.sm-title-col {
+  width: 130px;
+	float: left;
+}
+
+.sm-title-col--top-pad {
+  margin-top: 110px;
+}
+
+/* PARA STYLING */
+.sm-para-container {
+  width: 70%;
+  margin: 160px 0 0;
+  margin-left: 5%;
+	position: relative;
+	overflow: hidden;
+}
+
+.sm-para-col {
+  width: 50%;
+  padding-right: 30px;
+  text-align: justify;
+	float: left;
+}
+
+/* FOOTER STYLING */
+.sm-footer {
+  margin-top: 100px;
+	padding: 30px;
+  width: 100%;
+	background-color: red;
+	position: relative;
+	overflow: hidden;
+}
+
+.sm-button {
+  margin-left: 20px;
+	float: left;
+}
+
+.sm-button a {
+  text-align: center;
+  padding: 10px 30px;
+  border: 1px solid white;
+  border-radius: 30px;
+  color: white;
+}
+
+.sm-button a:hover {
+  color: red;
+	background-color: white;
+  border: 1px solid red;
+  text-decoration: none;
+}
+
+/* FISHING HOVER STYLING */
+.sm-fish-hover-image {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sm-fish-hover:hover .sm-fish-hover-image {
+  opacity: 1;
+}
+
+/* COLOUR SWITCH STYLING */
+.sm-colour--on {
+  background-color: blue;
+  color: white;
+}
+
+.sm-colour--on a {
+  color: white;
+}
+
+.sm-colour--on .sm-button a {
+  border-color: white;
+  color: white;
+}
+
+.sm-colour--on footer {
+	background-color: blue;
+}
+
+/* POSITION SWITCH STYLING */
+.sm-position--on .sm-credit-container {
+  width: 100%;
+}
+
+.sm-position--on .sm-title-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.sm-position--on .sm-title-col {
+  width: 50%;
+}
+
+.sm-position--on .sm-title-container h1 {
+  font-size: 10vw;
+	margin-bottom: 10vh;
+	margin-top: 0;
+}
+
+.sm-position--on .sm-title-col--top-pad {
+  margin-top: 30vh;
+}
+
+.sm-position--on .sm-para-container {
+  margin-top: 50vh;
+}
+
+/* MOVE SWITCH STYLING */
+@keyframes move-left-to-right {
+  0% {
+    margin-left: 0;
+  }
+
+  50% {
+    margin-left: 60vw;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+.sm-move--on .sm-title-container .sm-left-to-right {
+  animation: move-left-to-right 5s ease infinite;
+}
+
+@keyframes move-right-to-left {
+  0% {
+    margin-left: 0;
+  }
+
+  50% {
+    margin-left: -30vw;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+.sm-move--on .sm-title-container .sm-right-to-left {
+  animation: move-right-to-left 5s ease infinite;
+}
