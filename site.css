@@ -13,10 +13,10 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  font-size: 14px;
+  font-size: 12px;
 	line-height: 1.5;
   font-family: 'Times', serif;
-	color: red;
+	color: green;
   min-height: 100vh;
   overflow: hidden;
   position: relative;
